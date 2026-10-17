@@ -153,3 +153,25 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(12.dp))
 
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+
+                        OutlinedTextField(
+                            value = birthDate,
+                            onValueChange = { birthDate = it },
+                            label = { Text(text = "Tgl Lahir", fontSize = 12.sp) },
+                            trailingIcon = {
+                                IconButton(onClick = { showDatePicker = true }) {
+                                    Icon(
+                                        imageVector = Icons.Default.DateRange,
+                                        contentDescription = "Pilih Tanggal"
+                                    )
+                                }
+                            },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(14.dp),
+                            singleLine = true
+                        )
+
