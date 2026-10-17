@@ -2,4 +2,5 @@
 <resources>
     <color name="purple_primary">#6C4AB6</color>
     <color name="purple_title">#5A2D82</color>
+    <color name="text_sub">#757575</color>
 </resources>
