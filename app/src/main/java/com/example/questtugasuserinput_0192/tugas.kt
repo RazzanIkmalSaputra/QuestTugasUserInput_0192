@@ -213,3 +213,42 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
+                    Text(
+                        text = "Pilih Skill Anda :",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isAndroidChecked,
+                                onCheckedChange = { isAndroidChecked = it }
+                            )
+                            Text(text = "Android", fontSize = 12.sp)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isUiUxChecked,
+                                onCheckedChange = { isUiUxChecked = it }
+                            )
+                            Text(text = "UI/UX", fontSize = 12.sp)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isWebChecked,
+                                onCheckedChange = { isWebChecked = it }
+                            )
+                            Text(text = "Web", fontSize = 12.sp)
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(20.dp))
+
