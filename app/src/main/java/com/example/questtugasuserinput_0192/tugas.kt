@@ -61,7 +61,7 @@ fun FormBiodataScreen() {
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            // Gambar Latar Belakang Bagian Atas
+
             Image(
                 painter = painterResource(id = R.drawable.ok),
                 contentDescription = "Header Image",
