@@ -252,3 +252,36 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(20.dp))
 
+                    Button(
+                        onClick = {
+                            val selectedSkills = mutableListOf<String>()
+                            if (isAndroidChecked) selectedSkills.add("Android")
+                            if (isUiUxChecked) selectedSkills.add("UI/UX")
+                            if (isWebChecked) selectedSkills.add("Web")
+
+                            submittedFirstName = firstName
+                            submittedLastName = lastName
+                            submittedEmail = email
+                            submittedBirthDate = birthDate
+                            submittedExperience = experience
+                            submittedSkills = selectedSkills.joinToString(", ")
+                            isDataSubmitted = true
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF0077C2),
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text(
+                            text = "Proceed",
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 16.sp
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
