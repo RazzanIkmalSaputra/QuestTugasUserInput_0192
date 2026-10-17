@@ -106,7 +106,7 @@ fun FormBiodataScreen() {
                         text = "Form Biodata",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF6B2FB5) // Warna ungu judul
+                        color = Color(0xFF6B2FB5)
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
@@ -116,4 +116,29 @@ fun FormBiodataScreen() {
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
+
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        OutlinedTextField(
+                            value = firstName,
+                            onValueChange = { firstName = it },
+                            label = { Text(text = "Nama Depan", fontSize = 12.sp) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(14.dp),
+                            singleLine = true
+                        )
+                        OutlinedTextField(
+                            value = lastName,
+                            onValueChange = { lastName = it },
+                            label = { Text(text = "Nama Belakang", fontSize = 12.sp) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(14.dp),
+                            singleLine = true
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(12.dp))
 
