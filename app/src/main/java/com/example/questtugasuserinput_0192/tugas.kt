@@ -45,3 +45,11 @@ fun FormBiodataScreen() {
         yearRange = 1950..2026
     )
 
+    var submittedFirstName by remember { mutableStateOf("") }
+    var submittedLastName by remember { mutableStateOf("") }
+    var submittedEmail by remember { mutableStateOf("") }
+    var submittedBirthDate by remember { mutableStateOf("") }
+    var submittedExperience by remember { mutableStateOf("") }
+    var submittedSkills by remember { mutableStateOf("") }
+    var isDataSubmitted by remember { mutableStateOf(false) }
+
