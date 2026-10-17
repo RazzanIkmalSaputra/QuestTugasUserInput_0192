@@ -53,3 +53,21 @@ fun FormBiodataScreen() {
     var submittedSkills by remember { mutableStateOf("") }
     var isDataSubmitted by remember { mutableStateOf(false) }
 
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            // Gambar Latar Belakang Bagian Atas
+            Image(
+                painter = painterResource(id = R.drawable.ok),
+                contentDescription = "Header Image",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(300.dp),
+                contentScale = ContentScale.Crop
+            )
+
