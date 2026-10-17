@@ -8,4 +8,5 @@
     <string name="label_birth_date">Tgl Lahir</string>
     <string name="label_experience">Experience</string>
     <string name="label_skill_title">Pilih Skill Anda :</string>
+    <string name="skill_android">Android</string>
 </resources>
