@@ -285,3 +285,60 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(24.dp))
 
+                    if (isDataSubmitted) {
+                        Card(
+                            shape = RoundedCornerShape(14.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = Color(0xFF212529)
+                            ),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp)
+                            ) {
+                                Text(
+                                    text = "Data Pendaftaran Berhasil :",
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 14.sp,
+                                    color = Color(0xFF00A2FF)
+                                )
+                                Spacer(modifier = Modifier.height(10.dp))
+                                Text(
+                                    text = "• Nama : $submittedFirstName $submittedLastName",
+                                    fontSize = 12.sp,
+                                    color = Color.White
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = "• Tanggal Lahir : $submittedBirthDate",
+                                    fontSize = 12.sp,
+                                    color = Color.White
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = "• Pengalaman : $submittedExperience",
+                                    fontSize = 12.sp,
+                                    color = Color.White
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = "• Email : $submittedEmail",
+                                    fontSize = 12.sp,
+                                    color = Color.White
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = "• Skills : $submittedSkills",
+                                    fontSize = 12.sp,
+                                    color = Color.White
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
