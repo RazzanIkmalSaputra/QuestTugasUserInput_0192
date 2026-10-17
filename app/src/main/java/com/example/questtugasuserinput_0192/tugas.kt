@@ -71,3 +71,17 @@ fun FormBiodataScreen() {
                 contentScale = ContentScale.Crop
             )
 
+            Box(
+                modifier = Modifier
+                    .padding(start = 20.dp, top = 20.dp)
+                    .size(44.dp)
+                    .background(Color.White, shape = CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Menu,
+                    contentDescription = "Menu Icon",
+                    tint = Color.Black
+                )
+            }
+
