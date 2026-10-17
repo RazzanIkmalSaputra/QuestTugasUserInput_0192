@@ -175,3 +175,41 @@ fun FormBiodataScreen() {
                             singleLine = true
                         )
 
+                        ExposedDropdownMenuBox(
+                            expanded = isExpExpanded,
+                            onExpandedChange = { isExpExpanded = !isExpExpanded },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(text = "Experience", fontSize = 12.sp) },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpExpanded)
+                                },
+                                shape = RoundedCornerShape(14.dp),
+                                modifier = Modifier
+                                    .menuAnchor()
+                                    .fillMaxWidth()
+                            )
+
+                            ExposedDropdownMenu(
+                                expanded = isExpExpanded,
+                                onDismissRequest = { isExpExpanded = false }
+                            ) {
+                                opsiPengalaman.forEach { opsi ->
+                                    DropdownMenuItem(
+                                        text = { Text(text = opsi, fontSize = 12.sp) },
+                                        onClick = {
+                                            experience = opsi
+                                            isExpExpanded = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
